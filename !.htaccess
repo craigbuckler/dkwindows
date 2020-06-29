@@ -1,0 +1,9 @@
+﻿# contact file
+AddType text/x-vcard vcf
+
+RewriteEngine on
+
+# main view loader
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]

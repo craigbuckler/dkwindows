@@ -1,0 +1,12 @@
+﻿# contact file
+AddType text/x-vcard vcf
+
+# rewrite to dk-windows-exmouth.co.uk
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^dk-windows-exmouth\.co\.uk [NC]
+RewriteRule ^/?(.*)$ http://dk-windows-exmouth.co.uk/$1 [L,R=301]
+
+# main view loader
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
