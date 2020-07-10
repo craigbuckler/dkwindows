@@ -3,12 +3,12 @@
 
 <hgroup>
 <h1>[[PAGETITLE]]</h1>
-<h2>Installation of New Door &amp; Two Sidelights, February 2011</h2>
+<h2>Installation of New Door &amp; Two Sidelights</h2>
 </hgroup>
 
-<p>Miss B, a new customer of ours from Exmouth, asked DK Glass &amp; Windows to supply and fit a new uPVC door with two sidelights during February 2011.</p>
+<p>Miss B, a new customer of ours from Exmouth, asked DK Glass &amp; Windows to supply and fit a new uPVC door with two sidelights.</p>
 
-<p>She contacted us after her existing uPVC door had broken its welds after it flew open in strong winds. Unfortunately, the previous door was not of good quality and no longer covered under a guarantee. After Miss B called us, we measured and quoted for a new door on the 25<sup>th</sup> January 2011. Her new door was fitted on 10<sup>th</sup> February 2011.</p>
+<p>She contacted us after her existing uPVC door had broken its welds after it flew open in strong winds. Unfortunately, the previous door was not of good quality and no longer covered under a guarantee. After Miss B called us, we measured and quoted for a new door on the 25<sup>th</sup> January. Her new door was fitted on 10<sup>th</sup> February.</p>
 
 <h2>Installation Obstacles</h2>
 

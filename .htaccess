@@ -1,4 +1,4 @@
-﻿# contact file
+# contact file
 AddType text/x-vcard vcf
 
 RewriteEngine on

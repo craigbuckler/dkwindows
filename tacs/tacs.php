@@ -1,8 +1,8 @@
 <?php
 /*
-	TACS: Templating and Caching System, v1.3.2
-	(C) Optimalworks Ltd, http://www.optimalworks.net/
-	Creative Commons Attribution 3.0 License: http://creativecommons.org/licenses/by/3.0/
+	TACS: Templating and Caching System, v1.3.5
+	(C) Optimalworks Ltd, https://www.optimalworks.net/
+	Creative Commons Attribution 3.0 License: https://creativecommons.org/licenses/by/3.0/
 */
 define('TACSFILENAME', 'tacs.php');	// the name of the TACS script file: do not use this name for any other files
 define('TACSPATH', 'tacs/');		// the relative path to TACS, e.g. 'tacs/' - only set if every page can use the same path
@@ -23,23 +23,23 @@ define('TACSDEBUG', false);		// set to true to view debugging information
 class TACS {
 
 	// properties
-	var $self;			// script location (path and filename)
-	var $url;			// actual URL (if URL rewrite used)
-	var $selfname;		// script filename
-	var $absloc;		// absolute location of script
-	var $tacspath;		// relative location of TACS folder
-	var $cachepath;		// location of cache
-	var $cachehttp;		// HTTP location of cache
-	var $cachefile;		// name of cached file
+	var $self;					// script location (path and filename)
+	var $url;						// actual URL (if URL rewrite used)
+	var $selfname;			// script filename
+	var $absloc;				// absolute location of script
+	var $tacspath;			// relative location of TACS folder
+	var $cachepath;			// location of cache
+	var $cachehttp;			// HTTP location of cache
+	var $cachefile;			// name of cached file
 	var $templatepath;	// global templates path
-	var $includes;		// included files count
-	var $renders;		// render count
-	var $debug;			// debug string
-	var $recache;		// recache flag (pass ?recache to force recaching)
-	var $timestart;		// script start time
+	var $includes;			// included files count
+	var $renders;				// render count
+	var $debug;					// debug string
+	var $recache;				// recache flag (pass ?recache to force recaching)
+	var $timestart;			// script start time
 
 	// constructor
-	function TACS() {
+	function __construct() {
 
 		// start buffer
 		if (TACSBUFFER) ob_start();
@@ -268,7 +268,11 @@ class TACS {
 	// saves temporary cache file and retrieves rendered content
 	function PreCacheHandler(&$content) {
 		$pcfile = $this->cachepath.'p'.$this->cachefile;
-		if ($this->WriteFile($pcfile, '<' . '?php set_include_path(\'../../\'); ?' . '>' . $content)) {
+		if ($this->WriteFile($pcfile,
+				'<' . '?php ob_start(); set_include_path(\'../../\'); ?' . '>' .
+				$content .
+				'<' . '?php ob_end_flush(); ?' . '>'
+			)) {
 			$content = @file_get_contents($this->cachehttp.'p'.$this->cachefile);
 			if (TACSDEBUG && $content === false) $this->debug .= "TACS ERROR: could not read pre-cache file: $pcfile\n";
 		}
@@ -315,8 +319,8 @@ class TACS {
 	// find HTTP location of cache
 	function CacheHTTPlocation() {
 		$hc = 'http';
-		if ($_SERVER['SERVER_PORT'] == 443) $hc .= 's';
-		$hc .= '://' . $_SERVER['HTTP_HOST'] . $this->self;
+		// if ($_SERVER['SERVER_PORT'] == 443) $hc .= 's';
+		$hc .= '://' . $_SERVER['SERVER_NAME'] . $this->self;
 		$hc = preg_replace('/\/[^\/]+$/', '/', $hc);
 		$hc .= $this->cachepath;
 		return $hc;

@@ -3,10 +3,10 @@
 
 <hgroup>
 <h1>[[PAGETITLE]]</h1>
-<h2>Replacement Fascias, Soffits, Gutters &amp; Downpipes, March 2011</h2>
+<h2>Replacement Fascias, Soffits, Gutters &amp; Downpipes</h2>
 </hgroup>
 
-<p>On 3 March 2011, Mrs H of Exmouth contacted us for a quote to replace the fascias, soffits and guttering on the front and rear of her home. She was happy with our quote so we arranged the installation for 11 March.</p>
+<p>On 3 March, Mrs H of Exmouth contacted us for a quote to replace the fascias, soffits and guttering on the front and rear of her home. She was happy with our quote so we arranged the installation for 11 March.</p>
 
 <h2>Installation Obstacles</h2>
 
@@ -20,10 +20,10 @@ We had to ensure that we had all the appropriate protective clothing and equipme
 
 [[<?php
 $lightbox = array(
-	'fascia-gutter-5' => 'Mrs H\'s new fascia and guttering, Exmouth, March 2011',
-	'fascia-gutter-6' => 'Mrs H\'s new fascia and guttering, Exmouth, March 2011',
-	'fascia-gutter-7' => 'Mrs H\'s new fascia and guttering, Exmouth, March 2011',
-	'fascia-gutter-8' => 'Mrs H\'s new fascia and guttering, Exmouth, March 2011'
+	'fascia-gutter-5' => 'Mrs H\'s new fascia and guttering, Exmouth',
+	'fascia-gutter-6' => 'Mrs H\'s new fascia and guttering, Exmouth',
+	'fascia-gutter-7' => 'Mrs H\'s new fascia and guttering, Exmouth',
+	'fascia-gutter-8' => 'Mrs H\'s new fascia and guttering, Exmouth'
 );
 ?>]]
 [['lightbox.php']]

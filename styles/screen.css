@@ -9,7 +9,7 @@ body
 {
 	position: relative;
 	font-family: "trebuchet ms", tahoma, arial, helvetica, sans-serif;
-	font-size: 80%;
+	font-size: 100%;
 	color: #444;
 	background-color: #025091;
 }
@@ -89,7 +89,7 @@ header nav li
 	position: relative;
 	display: inline;
 	float: left;
-	font-size: 1.2em;
+	font-size: 1em;
 	width: 7em;
 	padding: 0;
 	margin: 0 2px 0 0;
@@ -108,7 +108,7 @@ header nav li a
 }
 
 header nav li.active a,
-header nav li a.active, header nav li a.open, 
+header nav li a.active, header nav li a.open,
 header nav li a:hover, header nav li a:focus
 {
 	font-weight: bold;
@@ -131,7 +131,7 @@ header nav ul ul li
 {
 	display: block;
 	float: none;
-	font-size: 0.8em;
+	font-size: 1em;
 	width: 15em;
 	margin: 0;
 	background-color: #014f91;
@@ -245,7 +245,7 @@ div#mainimage img
 
 #intro p.main
 {
-	font-size: 2.4em;
+	font-size: 2em;
 	margin: 1.5em 0 0.8em 0;
 }
 
@@ -361,7 +361,7 @@ ul#services a:link, ul#services a:visited
 	position: relative;
 	display: block;
 	width: 280px;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	text-decoration: none;
 	padding: 4px;
 	color: #ddd;
@@ -446,7 +446,7 @@ ul.tabs li
 ul.tabs a:link, ul.tabs a:visited
 {
 	display: block;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	height: 2em;
 	line-height: 2em;
 	text-align: center;
@@ -587,7 +587,7 @@ a.button:link, a.button:visited
 	display: block;
 	width: 219px;
 	height: 47px;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-weight: bold;
 	line-height: 47px;
 	text-align: center;

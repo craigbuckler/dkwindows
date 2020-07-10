@@ -12,15 +12,11 @@
 <meta name="audience" content="all" />
 <meta name="distribution" content="global" />
 <meta name="author" content="[[COMPANY]]" />
-<meta name="publisher" content="[[COMPANY]], http://dk-windows-exmouth.co.uk/" />
+<meta name="publisher" content="[[COMPANY]], https://www.dkglassandwindows.co.uk/" />
 <meta name="owner" content="[[COMPANY]]" />
 <meta name="copyright" content="[[COMPANY]]" />
 <meta name="robots" content="index,follow" />
 <meta name="revisit-after" content="7 days" />
-
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 
 <!-- stylesheets -->
 <link type="text/css" rel="stylesheet" media="all" href="[[root]]styles/screen.css" />
