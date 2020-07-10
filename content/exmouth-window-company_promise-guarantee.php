@@ -43,12 +43,7 @@
 
 <li>
 <p><strong>Our 10 year guarantee.</strong></p>
-<p>Every window, door and conservatory installation is provided with a 10-year guarantee. In the unlikely event of a problem with the product or the way it was installed, just <a href="[[<?php echo $link['contact']; ?>]]">contact us</a> and we will put it right. In addition, you have the reassurance of our 10 year insurance-backed guarantee from the <a href="http://www.ggf.co.uk/">Glass and Glazing Federation</a>.</p>
-</li>
-
-<li>
-<p><strong>We are a FENSA-registered window company.</strong></p>
-<p>All relevant installations are issued with an important <a href="http://www.fensa.org.uk/">FENSA certificate</a>. This is a compulsory document which proves your installation conforms to all current building regulations. It can be kept with the deeds to your home and is required if you sell your home.</p>
+<p>Every window, door and conservatory installation is provided with a 10-year guarantee. In the unlikely event of a problem with the product or the way it was installed, just <a href="[[<?php echo $link['contact']; ?>]]">contact us</a> and we will put it right. In addition, you have the reassurance of our 10 year insurance-backed guarantee from the <a href="https://www.ggf.org.uk/">Glass and Glazing Federation</a>.</p>
 </li>
 
 <li>

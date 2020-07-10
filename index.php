@@ -8,9 +8,9 @@ date_default_timezone_set('UTC');
 
 $host = $_SERVER['HTTP_HOST'];
 $page = str_replace('?' . $_SERVER['QUERY_STRING'], '', $_SERVER['REQUEST_URI']);
-$url = 'http://' . $host . $page;
+$url = 'http' . ($_SERVER['SERVER_PORT'] == 443 ? 's' : '') . '://' . $host . $page;
 $local = (strpos($host , '.co') === false);
-$root = ($local ? '/dkwindows/' : '/');
+$root = ($local ? '/' : '/');
 
 // debug
 define('DEBUG', $local);
@@ -21,7 +21,7 @@ define('DEBUG', $local);
 
 // find content
 $cpage = $page;
-if ($local) $cpage = str_replace($root, '', $cpage);
+if ($root != '/') $cpage = str_replace($root, '', $cpage);
 $cpage = str_replace('/', '_', preg_replace('/^\/+|\/+$/', '', $cpage));
 if ($cpage == '') $cpage = 'home';
 

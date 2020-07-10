@@ -9,39 +9,39 @@ $menuXML = <<<XML
 	<item id="services" text="Services" link="services" title="Exmouth window, door and glazing installation and repair" key="s">
 
 		<item id="windows" text="Replacement Windows" link="services/replacement-windows-installation" title="Window fitting in Exmouth &amp;amp; East Devon" key="" />
-		
+
 		<item id="doors" text="Replacement Doors" link="services/replacement-doors-installation" title="Door fitting in Exmouth &amp;amp; East Devon" key="" />
-		
+
 		<item id="repair" text="Door &amp;amp; Window Repairs" link="services/window-door-repair" title="Door &amp;amp; window repairs in Exmouth &amp;amp; East Devon" key="" />
-		
+
 		<item id="conservatories" text="Conservatories" link="services/conservatory-installation" title="Conservatory installation in Exmouth &amp;amp; East Devon" key="" />
-		
+
 		<item id="glazing" text="Traditional Glazing Services" link="services/glass-work" title="Glass roofs, tables, shelves and panels in Exmouth &amp;amp; East Devon" key="" />
-		
+
 		<item id="facias" text="Fascias, Soffits &amp;amp; Guttering" link="services/facias-soffits-guttering" title="UPVC fascias, soffits &amp;amp; guttering in Exmouth &amp;amp; East Devon" key="" />
 
 	</item>
 
 	<item id="examples" text="Examples" link="case-studies" title="Customer testimonials and case studies" key="e">
 
-		<item id="casestudy6" text="Window &amp; Door Installation" link="case-studies/window-door-testimonial-2" title="Replacement double glazed windows and doors installed in Sidmouth (2011)" key="" />
-	
-		<item id="casestudy3" text="Double Glazing Installation" link="case-studies/window-door-testimonial-1" title="Replacement double glazing installed in Exmouth (2010)" key="" />
-		
-		<item id="casestudy5" text="New Fascias &amp; Guttering 1" link="case-studies/fascia-guttering-testimonial-1" title="Replacement fascias, soffits, guttering and downpipes installed in Exmouth (2010)" key="" />
-	
-		<item id="casestudy4" text="New Fascias &amp; Guttering 2" link="case-studies/fascia-guttering-testimonial-2" title="Replacement fascias, soffits, guttering and downpipes installed in Exmouth (2011)" key="" />
-	
-		<item id="casestudy1" text="Replacement Door 1" link="case-studies/door-testimonial-1" title="New door and sidelight installation in Exmouth (2011)" key="" />
-		
-		<item id="casestudy2" text="Replacement Door 2" link="case-studies/door-testimonial-2" title="Replacement door installation in Exmouth (2011)" key="" />
-		
-		<item id="casestudy2" text="Replacement Door 3" link="case-studies/door-testimonial-3" title="Replacement internal door and window installation in Exmouth (2011)" key="" />
+		<item id="casestudy6" text="Window &amp; Door Installation" link="case-studies/window-door-testimonial-2" title="Replacement double glazed windows and doors installed in Sidmouth" key="" />
+
+		<item id="casestudy3" text="Double Glazing Installation" link="case-studies/window-door-testimonial-1" title="Replacement double glazing installed in Exmouth" key="" />
+
+		<item id="casestudy5" text="New Fascias &amp; Guttering 1" link="case-studies/fascia-guttering-testimonial-1" title="Replacement fascias, soffits, guttering and downpipes installed in Exmouth" key="" />
+
+		<item id="casestudy4" text="New Fascias &amp; Guttering 2" link="case-studies/fascia-guttering-testimonial-2" title="Replacement fascias, soffits, guttering and downpipes installed in Exmouth" key="" />
+
+		<item id="casestudy1" text="Replacement Door 1" link="case-studies/door-testimonial-1" title="New door and sidelight installation in Exmouth" key="" />
+
+		<item id="casestudy2" text="Replacement Door 2" link="case-studies/door-testimonial-2" title="Replacement door installation in Exmouth" key="" />
+
+		<item id="casestudy2" text="Replacement Door 3" link="case-studies/door-testimonial-3" title="Replacement internal door and window installation in Exmouth" key="" />
 
 	</item>
 
 	<item id="about" text="About" link="exmouth-window-company" title="About DK Glass &amp;amp; Windows, Exmouth &amp;amp; East Devon" key="a">
-		
+
 		<item id="promise" text="Our Promise" link="exmouth-window-company/promise-guarantee" title="DK Glass &amp;amp; Windows customer promise &amp;amp; guarantees" key="p" />
 
 	</item>
@@ -64,11 +64,11 @@ function MenuRecurse($menuItems, $level = 1) {
 	$m = array();
 
 	foreach ($menuItems->item as $item) {
-		
+
 		// define links
 		$id = (string) $item['id'];
 		$link[$id] = $root . (string) $item['link'];
-		
+
 		// get sub-menu
 		$s = MenuRecurse($item, $level+1);
 		$active = (strpos($page, 'pc' . str_replace('/', '-', $root . $item['link']) . '.php') !== false);
@@ -77,22 +77,22 @@ function MenuRecurse($menuItems, $level = 1) {
 
 		// define menu
 		$m[] = new Menu(
-			$id, 
-			$item['text'], 
+			$id,
+			$item['text'],
 			$link[$id],
-			$item['title'], 
-			$item['key'], 
+			$item['title'],
+			$item['key'],
 			$level,
 			$active,
 			$open,
 			$s
 		);
-		
+
 		// active menu
 		if ($active) $activeMenu = $m[count($m)-1];
-	
+
 	}
-	
+
 	return $m;
 
 }
@@ -111,7 +111,7 @@ function DisplayMenu($menu, $outer = 'ul', $inner = 'li', $sep = '', $level = 99
 		if ($sep && $i+1 < $il) $m .= "$sep\n";
 	}
 	if ($m && $outer) $m = "<$outer>\n$m</$outer>\n";
-	
+
 	return $m;
 
 }

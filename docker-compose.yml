@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  dkwindows:
+    image: php73
+    container_name: dkwindows
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8080:80"
+      - "443:443"

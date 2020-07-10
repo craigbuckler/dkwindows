@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: http://dk-windows-exmouth.co.uk/sitemap.xml
+Sitemap: https://www.dkglassandwindows.co.uk/sitemap.xml
 Disallow: /content
 Disallow: /logs
 Disallow: /script

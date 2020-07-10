@@ -3,12 +3,12 @@
 
 <hgroup>
 <h1>[[PAGETITLE]]</h1>
-<h2>Full Double Glazing Installation, November 2010</h2>
+<h2>Full Double Glazing Installation</h2>
 </hgroup>
 
 <p>Mr &amp; Mrs C were already customers of [[COMPANY]] after we fitted a new front door and completed window repairs at their old house.</p>
 
-<p>They moved house in 2010 and asked us to provide a quote for replacing all double-glazed windows and doors. They also requested quotations from several other window companies to ensure they received the best value for money. Mr &amp; Mrs C chose [[COMPANY]] because they were pleased with our price, familiar with our products, and had experienced our high level of quality workmanship.</p>
+<p>They had just moved house and asked us to provide a quote for replacing all double-glazed windows and doors. They also requested quotations from several other window companies to ensure they received the best value for money. Mr &amp; Mrs C chose [[COMPANY]] because they were pleased with our price, familiar with our products, and had experienced our high level of quality workmanship.</p>
 
 <h2>Installation Obstacles</h2>
 
@@ -20,7 +20,7 @@
 
 <h2>Customer Testimonial</h2>
 
-<p>Mr &amp; Mrs C were very happy with the updated appearance of their home and remarked how well the new doors and windows kept them warm through the cold winter of 2010/11.</p>
+<p>Mr &amp; Mrs C were very happy with the updated appearance of their home and remarked how well the new doors and windows kept them warm through the cold winter.</p>
 
 [[<?php
 $lightbox = array(

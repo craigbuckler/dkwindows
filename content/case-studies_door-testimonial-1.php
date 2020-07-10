@@ -3,10 +3,10 @@
 
 <hgroup>
 <h1>[[PAGETITLE]]</h1>
-<h2>New Door &amp; Sidelight Installation, February 2011</h2>
+<h2>New Door &amp; Sidelight Installation</h2>
 </hgroup>
 
-<p>Mr B from Exmouth asked DK Glass &amp; Windows to supply and fit a new composite door and sidelight during February 2011.</p>
+<p>Mr B from Exmouth asked DK Glass &amp; Windows to supply and fit a new composite door and sidelight.</p>
 
 <p>We showed him a selection of replacement door brochures and he selected one from our composite range. His new door was ordered, delivered and fitted within three weeks.</p>
 

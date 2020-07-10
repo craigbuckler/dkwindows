@@ -1,7 +1,7 @@
 <?php
 // contact form
 $website = 'DK Windows website';
-$salesemail = ($local ? 'craig@optimalworks.net' : 'info@dkglassandwindows.com');
+$salesemail = ($local ? 'craig@optimalworks.net' : 'info@dkglassandwindows.co.uk');
 
 // ________________________________________________________
 // fetches a GET variable
@@ -79,40 +79,40 @@ if ($posted) {
 
 	// spam validation
 	$spam_error = 'details again and press submit in a few seconds. A technical error occurred';
-	
+
 	// rogue GET values [rg]
 	if ($error == '' && count($_GET) > 0) $error = $spam_error . ' [rg]';
-	
+
 	// rogue POST values [rp]
 	if ($error == '') {
 		$valid = '[submit][key][name][telephone][email][query]';
 		foreach ($_POST as $key => $value) if (strpos($valid, "[$key]") === false) $error = $spam_error . ' [rp]';
 	}
-	
+
 	// user agent [ua], referrer [br], link check [lc], and key check [kc]
 	if ($error == '') {
 		if (!isset($_SERVER['HTTP_USER_AGENT']) || trim($_SERVER['HTTP_USER_AGENT']) == '') $error = $spam_error . ' [ua]';
-		
+
 		if (!isset($_SERVER['HTTP_REFERER']) || strpos($_SERVER['HTTP_REFERER'], $url) !== 0) $error = $spam_error . ' [br]';
-		
+
 		$l = 'http';
 		$lc = substr_count($name, $l) + substr_count($telephone, $l) + substr_count($query, $l);
 		if ($lc > 0) $error = $spam_error . ' [lc]';
-		
+
 		$key = post('key', '', 30);
 		if ($key == '' || (microtime_int() - (int) preg_replace('/\D/', '', encode($key))) < 8) $error = $spam_error . ' [kc]';
 	}
-	
+
 	if ($error != '') {
-	
+
 		// show error
 		$p = strrpos($error, ',');
 		if ($p !== false) $error = substr($error, 0, $p+1) . ' and ' . substr($error, $p+2);
 		$error = "<p class=\"error\">Please enter your $error.</p>\n";
-		
+
 	}
 	else {
-	
+
 		// send email
 		if ($email != '') $header = "From: $name <$email>\n";
 		else $header = "From: $website <$salesemail>\n";
@@ -129,7 +129,7 @@ if ($posted) {
 
 		if ($success) echo '<p>Thank you for your enquiry &ndash; we will contact you shortly.</p><p><a href=""><em>Send another message?&hellip;</em></a></p>';
 		else {
-			$error = "<p class=\"error\">Your enquiry could not be sent at this time. Please try again shortly or contact <a href=\"#\" class=\"email\">info {at} dkglassandwindows dot com</a> directly.</p>\n";
+			$error = "<p class=\"error\">Your enquiry could not be sent at this time. Please try again shortly or contact <a href=\"#\" class=\"email\">info {at} dkglassandwindows dot co dot uk</a> directly.</p>\n";
 			echo $error;
 		}
 
@@ -142,16 +142,16 @@ if ($posted) {
 			fwrite($fp, $res);
 			fclose($fp);
 		}
-		
+
 	}
 
 }
 
 // show form
 if (!$success) {
-	
+
 	if ($error == '') {
-		echo '<p>Please contact us by telephone, email, <a href="http://www.facebook.com/dkwindowsexmouth">Facebook post</a>, or complete this form and we will contact you. Please indicate the best time to call you.</p>';
+		echo '<p>Please contact us by telephone, email, <a href="https://www.facebook.com/Dk-glass-and-windows-102616768175965">Facebook post</a>, or complete this form and we will contact you. Please indicate the best time to call you.</p>';
 	}
 	else echo $error;
 

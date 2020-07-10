@@ -50,8 +50,8 @@ if ($url !== '') {
 else {
 
 	// show error page
-	$eurl = 'http://' . $host . $root . 'error404';
-	
+	$eurl = 'http' . ($_SERVER['SERVER_PORT'] == 443 ? 's' : '') . '://' . $host . $root . 'error404';
+
 	$fcont = file_get_contents($eurl);
 	if ($fcont !== false) {
 		header('HTTP/1.0 404 Not Found');

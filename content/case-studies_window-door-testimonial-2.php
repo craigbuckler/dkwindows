@@ -3,7 +3,7 @@
 
 <hgroup>
 <h1>[[PAGETITLE]]</h1>
-<h2>Full Double Glazed Door &amp; Window Installation, Sidmouth, July 2011</h2>
+<h2>Full Double Glazed Door &amp; Window Installation, Sidmouth</h2>
 </hgroup>
 
 <p>A regular customer of ours, the manager of a busy letting agents in Sidmouth, contacted us. He was acting on behalf of a landlord of a house in Woodlands, Sidmouth, who required all the windows and doors replaced before a new tenant moved in to the property.</p>

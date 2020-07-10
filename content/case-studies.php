@@ -49,7 +49,7 @@ else {
 
 <p><img src="[[root]]images/dave-kavanagh.jpg" width="105" height="79" alt="David Kavanagh" class="photo" />DK Glass &amp; Windows is an Exmouth window company founded [[<?php echo intval(date('Y')) - 2007; ?>]] years ago by David Kavanagh.</p>
 
-<p>Dave has over 15 years experience in the double glazing industry. Unlike larger companies, we offer a more personal service and competitive prices. We pride ourselves on our expertise and quality workmanship.</p>
+<p>Dave has over 25 years experience in the double glazing industry. Unlike larger companies, we offer a more personal service and competitive prices. We pride ourselves on our expertise and quality workmanship.</p>
 
 <p><a href="[[<?php echo $link['about']; ?>]]">More information about DK Glass &amp; Windows in Exmouth&hellip;</a></p>
 
